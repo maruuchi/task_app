@@ -1,0 +1,25 @@
+<button class=”btn btn-primary”>ボタン</button>
+
+<h1>TODOリスト一覧</h1>
+<table>
+ <thead>
+    <tr>
+      <th>番号</th>
+      <th>タイトル</th>
+      <th>詳細</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @tasks.each do |task| %>
+    <tr>
+        <td><%= task.id %></td>
+        <td><%= task.title %></td>
+        <td><%= task.description %></td>
+        <td><%= link_to '詳細', task_path(task) %></td>
+        <td><%= link_to '編集', edit_task_path(task) %></td>
+        <td><%= link_to '削除', task_path(task), method: :delete %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<p><%= link_to 'ToDoリストの作成', new_task_path %></p>

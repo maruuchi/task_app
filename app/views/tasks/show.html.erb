@@ -1,0 +1,16 @@
+
+<table>
+  <tr>
+    <th>タイトル</th>
+    <td><%= @task.title %></td>
+  </tr>
+  <tr>
+    <th>詳細</th>
+    <td><%= @task.description %></td>
+  </tr>
+  <tr>
+    <th>Eメールアドレス</th>
+    <td><%= @task.user.email %></td>
+  </tr>
+</table>
+<p><%= link_to '一覧に戻る', tasks_url %></p>

@@ -1,0 +1,16 @@
+<h1>タスクの新規登録</h1>
+<div style="width: 300px;">
+  <%= form_with model: @task, local: true do |f| %>
+    <div>
+      <%= f.label :title, "【タイトル】" %>
+      <%= f.text_field :title, rows: 3 %>
+    </div>
+    <div>
+      <%= f.label :description, "【詳細】" %>
+      <%= f.text_area :description, rows: 3,class: 'form-control' %>
+    </div>
+      <%= f.submit '送信' %>
+    
+  <% end %>
+</div>
+<p><%= link_to '一覧に戻る', tasks_url %></p>
