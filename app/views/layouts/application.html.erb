@@ -4,29 +4,23 @@
     <title>TODOリスト</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <nav>
-      <% if user_signed_in? %>
-        <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
-      <% else %>
-        <%= link_to '新規登録', new_user_registration_path %>
-        <%= link_to 'ログイン', new_user_session_path %>
-      <% end %>
-      <% if user_signed_in? %>
-        ユーザー名 : <%= current_user.username %>さん
-      <% end %>
-    </nav>
-
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
-  
-    <%= yield %>
+    <header>
+      <%= render 'layouts/navbar' %>    
+    </header>
+    <main>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
     
+      <%= yield %>
+    </main>
+    <footer>      
+      <%= render 'layouts/footer' %>
+    </footer>
   </body>
 </html>
