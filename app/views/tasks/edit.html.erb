@@ -2,12 +2,12 @@
 <div style="width: 300px;">
   <%= form_with model: @task, local: true do |f| %>
     <div>
-    <%= f.label :title, "【タイトル】" %>
-    <%= f.text_field :title, size: 50 %>
+      <%= f.label :title, "【タイトル】" %>
+      <%= f.text_field :title, size: 50 %>
     </div>
     <div>
-    <%= f.label :description, "【詳細】" %>
-    <%= f.text_area :description %>
+      <%= f.label :description, "【詳細】" %>
+      <%= f.text_area :description %>
     </div>
     <%= f.submit '更新' %>
   <% end %>
