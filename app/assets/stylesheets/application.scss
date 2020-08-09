@@ -1,1 +1,94 @@
 @import "bootstrap";
+
+body {
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 10px;
+}
+
+table {
+  margin: 0 auto;
+}
+
+/* ------- ヘッダー ------- */
+
+header {
+  top:0;
+  left:0;
+  padding:0;
+  position: fixed;
+  background:rgb(13, 121, 192);
+  width:100%;
+  box-sizing:border-box;
+  border-bottom: 0.8px solid #727069;
+  z-index: 10;
+}
+header nav .icon{
+  float: left;
+  margin-left: 10px;
+  padding: 20px;
+  color: #ffffff;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  float: right;
+  padding-top: 20px;
+  margin-right: 10px;
+  color: #ffffff;
+}
+
+header nav ul li a {
+  padding: 0 20px;
+  color: #ffffff;
+  
+  display: block;
+}
+
+header nav ul li a:hover{
+  color: #ffffff; 
+  transition: 0.5s;
+  text-decoration: none;
+}
+
+.new_page {
+  margin: 0 auto;
+}
+
+/* ----ログインページ ----*/
+.login_screen {
+  margin-top: 50px;
+  padding-bottom: 20px;
+}
+
+.actions {
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+
+
+/* ======フッター ======== */
+
+footer.content-wrapper {
+   display: flex;
+   justify-content: space-between;
+   padding: 50px 0;
+
+}
+
+
+
+.copyright p {
+   font-size: 0.9rem;
+   margin: 0 auto;
+   line-height: 80px;
+   
+   color: #333;
+   background-color: #e8e7e7;
+}
