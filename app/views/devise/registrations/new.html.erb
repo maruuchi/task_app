@@ -4,30 +4,30 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :mailaddress, "メールアドレス" %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <p><%= f.label :mailaddress, "メールアドレス" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %></p>
   </div>
 
   <div class="field">
-    <%= f.label :username, "ユーザーネーム" %><br />
-    <%= f.text_field :username, autofocus: true, autocomplete: "username" %>
+    <p><%= f.label :username, "ユーザーネーム" %>
+    <%= f.text_field :username, autofocus: true, autocomplete: "username" %></p>
   </div>
 
   <div class="field">
-    <%= f.label :パスワード %>
+    <p><%= f.label :パスワード %>
     <% if @minimum_password_length %>
     <em>(半角英数字 <%= @minimum_password_length %> 文字以上)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <% end %>
+    <%= f.password_field :password, autocomplete: "new-password" %></p>
   </div>
 
   <div class="field">
-    <%= f.label :再確認のためパスワードを入力してください %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <p><%= f.label :再確認のためパスワードを入力してください %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %></p>
   </div>
 
   <div class="actions">
-    <%= f.submit "サインアップ" %>
+    <%= f.submit "登録する" %>
   </div>
 <% end %>
 
