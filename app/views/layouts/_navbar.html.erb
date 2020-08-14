@@ -1,15 +1,18 @@
-<nav>
-  <div class="icon">TODOリスト</div>
-  <ul>
-    <% if user_signed_in? %>
-      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
-    <% else %>
-      <li><%= link_to '新規登録', new_user_registration_path %></li>
-      <li><%= link_to 'ログイン', new_user_session_path %></li>
-    <% end %>
-   <%# ログイン時 %>
-    <% if user_signed_in? %>
-      <li>ログイン者 : <%= current_user.username %></li>
-    <% end %>
-  </ul>
-</nav>
+<header>
+  <nav>
+    <div class="icon">TODOリスト</div>
+    <ul>
+      <% if user_signed_in? %>
+        <li><%= link_to 'アカウント編集', edit_user_registration_path, class: 'nav-link' %></li>
+        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'nav-link' %></li>
+      <% else %>
+        <li><%= link_to '新規登録', new_user_registration_path, class: 'nav-link' %></li>
+        <li><%= link_to 'ログイン', new_user_session_path, class: 'nav-link' %></li>
+      <% end %>
+    <%# ログイン時 %>
+      <% if user_signed_in? %>
+        <li>ログイン者 : <%= current_user.username %></li>
+      <% end %>
+    </ul>
+  </nav>
+</header>
