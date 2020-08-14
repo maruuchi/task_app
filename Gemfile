@@ -18,6 +18,11 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # ログイン機能
 gem 'devise'
 
+# 日本語化
+gem 'rails-i18n', '~> 5.1'
+gem 'devise-i18n'
+
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
@@ -35,11 +40,25 @@ group :test do
   gem 'chromedriver-helper'
 end
 
+<<<<<<< HEAD
 # Bootstrap
 gem 'bootstrap', '~> 4.4.1'
+=======
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# bootstrap
+gem 'bootstrap', '~> 4.5.0'
+>>>>>>> a41f3278b0dd39d8c88b07640e4265c58765ff2a
 gem 'jquery-rails'
 gem 'devise-bootstrap-views', '~> 1.0'
 
+<<<<<<< HEAD
 # 日本語化
 gem 'rails-i18n', '~> 5.1'
 gem 'devise-i18n'
+=======
+gem 'devise-bootstrap-views', '~> 1.0'
+
+gem 'rails-i18n', '~> 5.1'
+>>>>>>> a41f3278b0dd39d8c88b07640e4265c58765ff2a

@@ -30,7 +30,7 @@ header {
 }
 header nav .icon{
   float: left;
-  margin-left: 10px;
+  font-size: 1.0rem;
   padding: 20px;
   color: #ffffff;
 }
@@ -61,8 +61,8 @@ header nav ul li a:hover{
   margin: 0 auto;
 }
 
-/* ----ログインページ ----*/
-.login_screen {
+/* ----ログイン画面 ----*/
+.first_step {
   margin-top: 50px;
   padding-bottom: 20px;
 }
